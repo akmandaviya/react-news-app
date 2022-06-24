@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import NavBar from './components/NavBar'
 import News from './components/News'
-import error  from  '../src/404.webp'
+import Error  from  './components/Error'
 
 import {
   BrowserRouter as Router,
@@ -16,23 +16,18 @@ export default class App extends Component {
       <> <Router>
         <NavBar/>
 
-      {/* < img style={{width:"200px", height:"200px"}} src={error} alt='error message' /> */}
-        {/* <News pageSize={6} country="in" category="sports"/> */}
-
-
          <Routes>
-
-         <Route exact path="/" element={<News pageSize={6} country="in" category="general"/>}/>
-          <Route exact path="/buisness" element={<News pageSize={6} country="in" category="buisness"/>}/>
-          <Route exact path="/entertainment" element ={<News pageSize={6} country="in" category="entertainment"/>}/>
-          <Route exact path="/health" element={<News  pageSize={6} country="in" category="health"/>}/>
-          <Route exact path="/health" element={<News pageSize={6} country="in" category="health"/>}/>
-          <Route exact path="/science" element={<News  pageSize={6} country="in" category="science"/>}/>
-          <Route exact path="/sports" element={<News  pageSize={6} country="in" category="sports"/>}/>
-          <Route exact path="/technology" element={<News pageSize={6} country="in" category="technology"/>}/>
+          <Route exact path="/" element={<News key="general" pageSize={9} country="in" category="general"/>}/>
+          {/* <Route exact path="/buisness" element={<News key="buisness" pageSize={6} country="in" category="buisness"/>}/> */}
+          <Route exact path="/entertainment" element ={<News  key="entertainment" pageSize={9} country="in" category="entertainment"/>}/>
+          <Route exact path="/health" element={<News key="health" pageSize={9} country="in" category="health"/>}/>
+          <Route exact path="/health" element={<News key="health" pageSize={9} country="in" category="health"/>}/>
+          <Route exact path="/science" element={<News key="science" pageSize={9} country="in" category="science"/>}/>
+          <Route exact path="/sports" element={<News key="sports" pageSize={9} country="in" category="sports"/>}/>
+          <Route exact path="/technology" element={<News  key="technology" pageSize={9} country="in" category="technology"/>}/>
 
           {/* default route  */}
-          <Route path="*"  element={<img style={{marginLeft:"200px", marginTop:"200px", width:"500px", height:"500px"}} src={error} alt='error message' />}/>
+          <Route path="*"  element={<Error/>}/> 
 
           </Routes>
         </Router>
