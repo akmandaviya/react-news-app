@@ -17,7 +17,7 @@ export default class App extends Component {
         <NavBar/>
 
          <Routes>
-          <Route exact path="https://endearing-cranachan-2a8fff.netlify.app/" element={<News key="general" pageSize={9} country="in" category="general"/>}/>
+          <Route exact path="https://react-news-app-nu.vercel.app/" element={<News key="general" pageSize={9} country="in" category="general"/>}/>
           {/* <Route exact path="/buisness" element={<News key="buisness" pageSize={6} country="in" category="buisness"/>}/> */}
           <Route exact path="/entertainment" element ={<News  key="entertainment" pageSize={9} country="in" category="entertainment"/>}/>
           <Route exact path="/health" element={<News key="health" pageSize={9} country="in" category="health"/>}/>
